@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <title>Calculo de Media</title>
+        <meta charset="utf-8"/>
+        <style>
+            .campo{
+                width: 450px;
+                height: 550px;
+                background-color: #ccc;
+                padding: 10px 15px;
+            }
+            h1,h2{
+                font-family: monospace;
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 7px;
+                margin-top: 12px;
+            }
+            #nome{
+                margin: auto;
+                text-align: center;
+                color: #ccc;
+                height: 20px;
+                width: 250px;
+                margin-left: 95px;
+            }
+            .cmp{
+                background-color: #606060;
+                padding: 10px 25px 10px 50px;
+            }
+            .nota{
+                margin: 15px;
+                width: 135px;
+                height: 30px;
+                text-align: center;
+                color: #ccc;
+            }
+            .nota1{
+                margin-top: 15px;
+                margin-left: 105px;
+                width: 235px;
+                height: 35px;
+            }
+            .btn{
+                width: 95px;
+                height: 35px;
+                border: none;
+                border-radius: 4px;
+                background-color: #222;
+                color: #fff;
+                margin-left: 120px;
+                font-size: 20px;
+                font-family: sans-serif;
+                cursor: pointer;
+            }
+            .corpo{
+              background-color: #606060;
+                height: 170px;
+                
+            }
+            p{
+               text-align: center;
+               line-height: 12px;
+            }
+        </style>
+        
+        <script>
+        /*
+        melhorar o codigo criando outras funções e colocando cada uma responsavel por uma coisa
+        melhorar o css
+        melhorar as entradas e saidas de dados
+        */
+        function start(){
+            this.capturar()
+        }
+        function capturar(n1,n2,n3,n4){
+            var nome = document.getElementById('nome').value;
+            var n1 = parseFloat(document.querySelector('#n1').value);
+            var n2 = parseFloat(document.querySelector('#n2').value);
+            var n3 = parseFloat(document.querySelector('#n3').value);
+            var n4 = parseFloat(document.querySelector('#n4').value);
+            //var valorDigitado = "";
+            var media = "";
+                
+                
+            media = (n1+n2+n3+n4)/4;
+            //document.getElementById('valorDigitado').innerHTML = media;
+                
+            if( 7 <= media){
+                document.querySelector('#valorDigitado').innerHTML = `Você tirou a nota ${media}, por isso passou!`
+                //document.write(" Parabens ", nome, " voce passou com a média de: ", media);
+            }else if(media >= 5){
+                document.querySelector('#valorDigitado').innerHTML = `Você tirou a nota ${media}, por isso ficou de recuperação!`
+            }else{
+                document.querySelector('#valorDigitado').innerHTML = `Você tirou a nota ${media}, por isso não passou!`
+                 //document.write(nome ," infelizmente voce não passou e teve a média de: ", media);
+            }
+        }
+            
+        </script>
+    </head>
+    <body>
+        <div class="campo">
+            <h1>Calcule sua Media Escolar</h1>
+            <input type="text" id="nome" value="Seu Nome">
+            <hr>
+            <div class="cmp">
+                <input type="text" id="n1" class="nota" value="">
+                <input type="text" id="n2" class="nota" value="">
+                <input type="text" id="n3" class="nota" value="">
+                <input type="text" id="n4" class="nota" value=""><br>
+
+                <input type="submit" onclick="capturar()" value="calcular" class="btn">
+            </div>
+            <hr>
+            <h2>Veja sua Nota</h2>
+            
+            <p id="valorDigitado">Nota aqui</p>
+
+        </div>
+    </body>
+</html>
