@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <title>Calculo de Media</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="calculo-media.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <div class="campo container">
+            
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Ferramenta de calculo de média</a>
+            </nav>
+            <br/>
+
+            <div class="form-group">
+                <h1>Calcule sua Media Escolar</h1>
+                <hr>
+                <div class="cmp">
+                    <input type="text" id="n1" class="nota" placeholder="1° Nota">
+                    <input type="text" id="n2" class="nota" placeholder="2° Nota">
+                    <input type="text" id="n3" class="nota" placeholder="3° Nota">
+                    <input type="text" id="n4" class="nota" placeholder="4° Nota"><br>
+
+                    <input type="submit" onclick="calcular()" value="calcular" class="botao btn btn-primary">
+                </div>
+            </div>
+            
+            <hr>
+            <h2>Veja sua Nota:</h2>
+            <div id="valorDigitado" class="alert alert-success">
+                <p>Sua nota irá aparecer aqui!!!</p>
+            </div>
+        </div>
+
+        <script src="calculoMedia.js">
+        </script>
+    </body>
+</html>
