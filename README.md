@@ -1,6 +1,3 @@
-# Calculo-de-Media
-Apenas para prática de html, css e JS
+#Ferramenta para cálculo de Nota escolar
 
-marcação simples em html
-estilização com css
-e codigo simples com js
+=> Ferramenta simples utilizando HTML, CSS, Bootstrap e JavaScript.
